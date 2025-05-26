@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="Documentation du projet Jokonu" name="description" />
+    <meta content="Jokonu, Documentation, Projet" name="keywords" />
+    <meta content="Jean-Pierre Souamy-Ogowet" name="author" />
+    <title>Jokonu - Documentation</title>
+
+    <!-- ===== Favicons ===== -->
+    <link href="../img/faviconjpso.jpg" rel="icon" />
+
+    <!-- ===== Google fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- ====== Boxicons ====== -->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- ===== Vendeur CSS ===== -->
+    <link href="../vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- ===== Main CSS ===== -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="css/jokonu.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== Header ========== -->
+    <header id="header" class="fixed-top"></header>
+    <!-- ========== Fin Header ========== -->
+
+    <div class="container-jokonu">
+        <header class="project-header">
+            <h1>Jokonu</h1>
+            <p class="subtitle">Application de blagues interactives</p>
+        </header>
+
+        <main>
+            <section id="description" class="jokonu-section" data-aos="fade-up">
+                <h2><i class='bx bx-info-circle'></i> Description du Projet</h2>
+                <div class="section-content">
+                    <p>Jokonu est une application web ludique permettant de générer des blagues. L'objectif est de créer une expérience interactive et amusante autour de l'humour.</p>
+                    <div style="text-align:center; margin: 2rem 0;">
+                        <img src="../img/jokonu.png" alt="Aperçu Jokonu" style="width: 100%; max-width: 80%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="jokonu-section" data-aos="fade-up" data-aos-delay="100">
+                <h2><i class='bx bx-laugh'></i> Fonctionnalités</h2>
+                <div class="section-content">
+                    <div class="feature-item">
+                        <i class='bx bx-refresh'></i>
+                        <h3>Blague aléatoire</h3>
+                        <div class="feature-content">
+                            <div class="feature-image">
+                                <img src="../img/imgJokonu/jokeAPI.png" alt="Carte blague 1">
+                            </div>
+                            <p>Affichage d'une blague différente à chaque clic, avec une interface intuitive et réactive.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-send'></i>
+                        <h3>Récupération des API</h3>
+                        <div class="feature-content">
+                            <div class="feature-image">
+                                <img src="../img/imgJokonu/jokeAPI.png" alt="Carte blague 1">
+                            </div>
+                            <p>Implementation de l'API de blagues via le site : https://icanhazdadjoke.com/</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="riddle" class="jokonu-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class='bx bx-bulb'></i> La Devinette du Jour</h2>
+                <div class="section-content">
+                    <div class="riddle-container" style="text-align: center; font-family: 'Orbitron', sans-serif;">
+                        <p style="font-size: 1.5rem; margin-bottom: 2rem;">Comment appelle-t-on un développeur qui travaille sur les API ?</p>
+                        <button onclick="toggleAnswer()" id="showAnswer" class="btn-primary" style="padding: 10px 20px; border-radius: 5px; background: var(--gradient-primary); color: white; border: none; cursor: pointer;">
+                            Découvrir la réponse
+                        </button>
+                        <p id="answer" style="display: none; margin-top: 2rem; font-size: 1.8rem; color: var(--primary-color); font-family: 'Blade Runner', 'Orbitron', sans-serif; font-weight: 700; text-shadow: 2px 2px 4px rgba(64, 48, 232, 0.3); letter-spacing: 2px;">
+                            "Un A-P-I-culteur"
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function toggleAnswer() {
+                    const answer = document.getElementById('answer');
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                }
+            </script>
+            <section class="jokonu-section" data-aos="fade-up" data-aos-delay="250">
+                <div class="section-content" style="text-align: center;">
+                    <a href="../JOKONU/index.html" target="_blank" class="btn-primary" style="display: inline-block; padding: 15px 30px; font-size: 1.2rem; text-decoration: none;">
+                        🤣 JOKONU 😂
+                    </a>
+                </div>
+            </section>
+
+            <section id="extensions" class="jokonu-section" data-aos="fade-up" data-aos-delay="300">
+                <h2><i class='bx bx-extension'></i> Extensions Possibles</h2>
+                <div class="section-content">
+                    <div class="feature-item">
+                        <i class='bx bx-message-square-dots'></i>
+                        <h3>Blagues Multilingues</h3>
+                        <div class="feature-description">
+                            <p>Intégration d'APIs de blagues dans différentes langues :</p>
+                            <ul>
+                                <li>JokeAPI (https://jokeapi.dev/) - Support multilingue</li>
+                                <li>Blagues API (https://www.blagues-api.fr/) - Blagues en français</li>
+                                <li>Dad Jokes API (https://icanhazdadjoke.com/) - Blagues en anglais</li>
+                            </ul>
+                            <div class="code-example">
+                                <pre><code>
+// Exemple d'intégration multilingue
+async function getJoke(language) {
+    const apis = {
+        'fr': 'https://www.blagues-api.fr/api/random',
+        'en': 'https://icanhazdadjoke.com/'
+    };
+    const response = await fetch(apis[language]);
+    return await response.json();
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-category'></i>
+                        <h3>Catégorisation des Blagues</h3>
+                        <div class="feature-description">
+                            <p>Organisation des blagues par catégories :</p>
+                            <ul>
+                                <li>Blagues de dev</li>
+                                <li>Blagues de geek</li>
+                                <li>Blagues de dad</li>
+                                <li>Blagues de maman</li>
+                            </ul>
+                            <div class="code-example">
+                                <pre><code>
+// Exemple de filtrage par catégorie
+function filterJokesByCategory(jokes, category) {
+    return jokes.filter(joke => joke.category === category);
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-share-alt'></i>
+                        <h3>Partage Social</h3>
+                        <div class="feature-description">
+                            <p>Intégration des fonctionnalités de partage :</p>
+                            <ul>
+                                <li>Partage sur Twitter/X</li>
+                                <li>Partage sur Facebook</li>
+                                <li>Génération d'image avec la blague</li>
+                            </ul>
+                            <div class="code-example">
+                                <pre><code>
+// Exemple de fonction de partage
+function shareJoke(joke, platform) {
+    const shareUrls = {
+        twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(joke)}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`
+    };
+    window.open(shareUrls[platform], '_blank');
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-bot'></i>
+                        <h3>Mode Bot Discord</h3>
+                        <div class="feature-description">
+                            <p>Création d'un bot Discord pour partager des blagues :</p>
+                            <ul>
+                                <li>Commande !joke pour obtenir une blague aléatoire</li>
+                                <li>Commande !joke [catégorie] pour une blague spécifique</li>
+                                <li>Statistiques des blagues les plus appréciées</li>
+                            </ul>
+                            <div class="code-example">
+                                <pre><code>
+// Exemple d'intégration Discord.js
+client.on('message', async message => {
+    if (message.content === '!joke') {
+        const joke = await getRandomJoke();
+        message.channel.send(joke);
+    }
+});
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="competences" class="jokonu-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class='bx bx-check-circle'></i> Compétences Développées</h2>
+                <div class="section-content">
+                    <div class="competences-grid">
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp1" checked disabled>
+                                <label for="comp1">Développement Front-End</label>
+                            </div>
+                            <p>Création d'une interface utilisateur moderne et responsive avec HTML, CSS et JavaScript.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp2" checked disabled>
+                                <label for="comp2">Gestion de projet agile</label>
+                            </div>
+                            <p>Utilisation d'outils collaboratifs et gestion des tâches avec Notion.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp3" checked disabled>
+                                <label for="comp3">Expérience utilisateur (UX)</label>
+                            </div>
+                            <p>Optimisation de l'expérience utilisateur et accessibilité.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp4" checked disabled>
+                                <label for="comp4">Déploiement web</label>
+                            </div>
+                            <p>Mise en ligne et maintenance de l'application sur un serveur web.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp5" checked disabled>
+                                <label for="comp5">Intégration d'API et Collaboration Communautaire</label>
+                            </div>
+                            <p>Intégration de l'API Blagues API avec authentification, participation active à la communauté Discord pour les mises à jour et améliorations de l'API, et contribution à l'écosystème des développeurs francophones.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="project-footer">
+            <a href="../../index.html" class="btn-primary">
+                <i class='bx bx-home'></i>
+                Retour au portfolio
+            </a>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- ========== Vendor JS ========== -->
+    <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/php-email-form/validate.js"></script>
+
+    <!-- ========== Main JS ========== -->
+    <script src="../js/main.js"></script>
+    <script src="js/jokonu.js"></script>
+</body>
+</html>

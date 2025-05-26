@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -44,22 +43,25 @@
   /**
  * Navbar links active state on scroll
  */
-let sidebarlinks = select('#sidebar .scrollto', true); // Changé navbar en sidebar
-const sidebarlinksActive = () => {
-  let position = window.scrollY + 200;
-  sidebarlinks.forEach(sidebarlink => {
-    if (!sidebarlink.hash) return;
-    let section = select(sidebarlink.hash);
-    if (!section) return;
-    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-      sidebarlink.classList.add('active');
-    } else {
-      sidebarlink.classList.remove('active');
-    }
-  });
-};
-window.addEventListener('load', sidebarlinksActive);
-onscroll(document, sidebarlinksActive);
+const sidebar = select('#sidebar');
+if (sidebar) {
+    let sidebarlinks = select('#sidebar .scrollto', true);
+    const sidebarlinksActive = () => {
+        let position = window.scrollY + 200;
+        sidebarlinks.forEach(sidebarlink => {
+            if (!sidebarlink.hash) return;
+            let section = select(sidebarlink.hash);
+            if (!section) return;
+            if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+                sidebarlink.classList.add('active');
+            } else {
+                sidebarlink.classList.remove('active');
+            }
+        });
+    };
+    window.addEventListener('load', sidebarlinksActive);
+    onscroll(document, sidebarlinksActive);
+}
 
 /**
  * Scrolls to an element with header offset
@@ -72,9 +74,10 @@ const scrollto = (el) => {
     offset -= 16; // Ajoute 16px de marge si le header n'est pas défilé
   }
 
+  let additionalOffset = -60; // decallasge de 50px
   let elementPos = select(el).offsetTop;
   window.scrollTo({
-    top: elementPos - offset,
+    top: elementPos - offset - additionalOffset,
     behavior: 'smooth'
   });
 };
@@ -238,7 +241,42 @@ on('click', '.scrollto', function(e) {
       easing: 'ease-in-out',
       once: true,
       mirror: false
-    })
+    });
+
+    // Ajout des animations pour les sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      const elements = section.querySelectorAll('.container, .row, .col-md-4, .col-md-6, .col-lg-6, .col-lg-3, .col-lg-4, .section-title, .flip-card, .skill-level-wrap, .framework-details, .bento-item, .certification-item, .certification-rgpd');
+      
+      elements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        element.style.transitionDelay = `${index * 0.1}s`;
+      });
+    });
+
+    // Fonction pour animer les éléments lors du scroll
+    const animateOnScroll = () => {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.75) {
+          const elements = section.querySelectorAll('.container, .row, .col-md-4, .col-md-6, .col-lg-6, .col-lg-3, .col-lg-4, .section-title, .flip-card, .skill-level-wrap, .framework-details, .bento-item, .certification-item, .certification-rgpd');
+          
+          elements.forEach(element => {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+          });
+        }
+      });
+    };
+
+    // Ajouter l'événement de scroll
+    window.addEventListener('scroll', animateOnScroll);
+    // Déclencher une première fois pour les éléments déjà visibles
+    animateOnScroll();
   });
 
   // Cursor Animation
@@ -304,20 +342,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// section 1 Projets Realisations Certifications
-
-// Carousel Certifications
 document.addEventListener('DOMContentLoaded', () => {
   const carousels = [
     {
       trackId: '#certifications-track',
       prevBtnClass: '.carousel-prev',
-      nextBtnClass: '.carousel-next'
+      nextBtnClass: '.carousel-next',
+      dotsClass: '.carousel-dots'
     },
     {
       trackId: '#certifications-tracker',
       prevBtnClass: '.carousel-prev',
-      nextBtnClass: '.carousel-next'
+      nextBtnClass: '.carousel-next',
+      dotsClass: '.carousel-dots'
     }
   ];
 
@@ -326,10 +363,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = track.querySelectorAll('.certification-item, .certification-rgpd');
     const prevBtn = track.parentElement.querySelector(carousel.prevBtnClass);
     const nextBtn = track.parentElement.querySelector(carousel.nextBtnClass);
+    const dotsContainer = track.parentElement.querySelector(carousel.dotsClass);
     let currentIndex = 0;
+
+    // Générer les dots dynamiquement
+    items.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active'); // Activer le premier dot
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.dot');
 
     function updateCarousel() {
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      // Mettre à jour les dots actifs
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
     }
 
     prevBtn.addEventListener('click', () => {
@@ -344,10 +400,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel();
   });
-});
-// formulaire contact
+});// formulaire contact
 document.querySelector('.php-email-form').addEventListener('submit', function (e) {
-  e.preventDefault(); // Empêche le rechargement par défaut
+  e.preventDefault();
   const form = this;
   const loading = form.querySelector('.loading');
   const errorMessage = form.querySelector('.error-message');
@@ -364,20 +419,19 @@ document.querySelector('.php-email-form').addEventListener('submit', function (e
     body: new FormData(form),
     headers: { 'Accept': 'application/json' }
   })
-  .then(response => {
-    if (response.ok) {
-      // Succès : affiche le message envoyé
-      loading.style.display = 'none';
+  .then(response => response.json())
+  .then(data => {
+    loading.style.display = 'none';
+    if (data.ok) {
       sentMessage.style.display = 'block';
-      form.reset(); // Réinitialise le formulaire
+      form.reset();
     } else {
-      throw new Error('Erreur lors de l’envoi');
+      throw new Error(data.error || "Erreur lors de l'envoi");
     }
   })
   .catch(error => {
-    // Erreur : affiche un message d’erreur
     loading.style.display = 'none';
-    errorMessage.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+    errorMessage.textContent = error.message || 'Une erreur est survenue. Veuillez réessayer.';
     errorMessage.style.display = 'block';
   });
 });
@@ -387,5 +441,90 @@ document.querySelector('.php-email-form').addEventListener('submit', function (e
 //   currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
 //   updateCarousel();
 // }, 5000); // Change toutes les 5 secondes
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Gestion des frameworks
+  const frameworkItems = document.querySelectorAll('.frameworks-list li');
+  let activeItem = null;
+
+  function positionDetails(details, item) {
+    const rect = item.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const detailsWidth = 250; // Largeur de la bulle
+    const margin = 10; // Marge entre l'élément et la bulle
+
+    // Calculer la position horizontale
+    let left;
+    if (rect.right + detailsWidth + margin > viewportWidth) {
+      // Positionner à gauche si pas assez d'espace à droite
+      left = -detailsWidth - margin;
+    } else {
+      // Positionner à droite
+      left = rect.width + margin;
+    }
+
+    // Calculer la position verticale
+    const top = Math.min(0, -rect.height / 2);
+
+    details.style.left = `${left}px`;
+    details.style.top = `${top}px`;
+  }
+
+  frameworkItems.forEach(item => {
+    const details = item.querySelector('.framework-details');
+    if (!details) return;
+
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      // Fermer la bulle active si on clique sur un autre élément
+      if (activeItem && activeItem !== item) {
+        activeItem.classList.remove('active');
+        activeItem.querySelector('.framework-details').classList.remove('active');
+      }
+
+      // Toggle l'état actif
+      item.classList.toggle('active');
+      details.classList.toggle('active');
+
+      // Mettre à jour l'élément actif
+      activeItem = item.classList.contains('active') ? item : null;
+
+      // Positionner la bulle
+      if (item.classList.contains('active')) {
+        positionDetails(details, item);
+      }
+    });
+  });
+
+  // Fermer la bulle en cliquant en dehors
+  document.addEventListener('click', (e) => {
+    if (activeItem && !activeItem.contains(e.target)) {
+      activeItem.classList.remove('active');
+      activeItem.querySelector('.framework-details').classList.remove('active');
+      activeItem = null;
+    }
+  });
+
+  // Repositionner la bulle lors du redimensionnement de la fenêtre
+  window.addEventListener('resize', () => {
+    if (activeItem) {
+      const details = activeItem.querySelector('.framework-details');
+      positionDetails(details, activeItem);
+    }
+  });
+});
+
+// Charger dynamiquement le footer
+fetch('../components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+        // Charger le CSS du footer
+        const footerCSS = document.createElement('link');
+        footerCSS.rel = 'stylesheet';
+        footerCSS.href = '../css/footer.css';
+        document.head.appendChild(footerCSS);
+    });
 })()
 

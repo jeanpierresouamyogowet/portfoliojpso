@@ -1,0 +1,17 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Handle requests for components
+RewriteCond %{REQUEST_URI} ^/components/(.*)$
+RewriteRule ^components/(.*)$ assets/components/$1 [L]
+
+# Serve static files
+<FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|ico)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Handle 404 errors
+ErrorDocument 404 /index.html 

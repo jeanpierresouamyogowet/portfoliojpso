@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 
 <head>
   <meta charset="utf-8" />
@@ -45,29 +45,8 @@
   <!-- ========== Header ========== -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-    
-      <!-- ========== Navbar ========== -->
-      <nav id="sidebar" class="sidebar">
-        <ul>
-          <!-- Ajout de l'image -->
-          <li class="sidebar-img">
-            <img src="./assets/img/SO.jpg" alt="Sidebar Image"><h1 class="logo"><a href="index.html">J.P.S.O</a></h1>
-          </li> 
-          <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">A propos</a></li>
-          <li><a class="nav-link scrollto" href="#about-bts-sio">BTS SIO</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Parcours</a></li>
-          <li><a class="nav-link scrollto" href="#skills">Compétences</a></li>
-          <li><a class="nav-link scrollto" href="#projets">Projets <br>& Certifications</a></li>
-          <li><a class="nav-link scrollto" href="#veille">Veille Technologique</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          
-  </ul>
-  <i class="bi bi-list mobile-nav-toggle"></i>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- ========== Fin Navbar ========== -->
+      <!-- Conteneur pour la navbar -->
+      <div id="navbar-container"></div>
     </div>
   </header>
   <!-- ========== Fin Header ========== -->
@@ -95,7 +74,7 @@
           <h1> Jean-Pierre <br>SOUAMY-OGOWET</h1>
           <h2>Étudiant en informatique</h2>
           <div>
-            <a href="#about" class="btn-get-started scrollto">Mon CV</a>
+            <a href="./assets/CV_DevFrontent.pdf" class="btn-get-started" target="_blank">Mon CV</a>
           </div>
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
@@ -125,7 +104,7 @@
               </h2>
             </div>
             <p>
-              Je m’appelle Jean-Pierre Souamy-Ogowet et je suis actuellement en BTS SIO option SLAM à Webitech « la Grande école en informatique » depuis 2023, où j’acquiers une expertise en développement web et applications mobiles pour créer des sites web dynamiques et des applications mobiles intuitives et performantes. 
+              Je m'appelle Jean-Pierre Souamy-Ogowet et je suis actuellement en BTS SIO option SLAM à Webitech « la Grande école en informatique » depuis 2023, où j'acquiers une expertise en développement web et applications mobiles pour créer des sites web dynamiques et des applications mobiles intuitives et performantes. 
             </p>
             <p>
               Après BTS SIO SLAM, j'envisage de
@@ -138,7 +117,7 @@
             <p>
               Enfin vous retrouverez <strong>ci-dessous mon CV</strong>.
             </p>
-            <a href="./assets/Curriculum Vitae JPSO développeur web.pdf" class="read-more" target="_blank">CV<i
+            <a href="./assets/CV_DevFrontent.pdf" class="read-more" target="_blank">CV<i
                 class="bi bi-long-arrow-right"></i>
             </a>
             <h3>Centres d'intérêt</h3>
@@ -193,7 +172,7 @@
             deux ans.</span>
           <p>
             Le Brevet de Technicien Supérieur aux Services Informatiques
-            aux Organisations (BTS SIO) est un programme de niveau Bac+2 qui prépare les étudiants à concevoir, maintenir et sécuriser des systèmes informatiques pour répondre aux besoins des entreprises. Il inclut l’apprentissage des langages de programmation, des bases de données, de la gestion des réseaux, et des méthodologies de projet. Il s’effectue en 2 ans, en initial avec minimum 10 semaines de stages
+            aux Organisations (BTS SIO) est un programme de niveau Bac+2 qui prépare les étudiants à concevoir, maintenir et sécuriser des systèmes informatiques pour répondre aux besoins des entreprises. Il inclut l'apprentissage des langages de programmation, des bases de données, de la gestion des réseaux, et des méthodologies de projet. Il s'effectue en 2 ans, en initial avec minimum 10 semaines de stages
             obligatoire en entreprise ou en alternance d'une durée de 12 ou
             de 24 mois.
           </p>
@@ -220,11 +199,11 @@
 
             <p>
               Voici une liste de quelque'uns des métiers principaux
-              accessibles après l’obtention de ce diplôme (SLAM) :
+              accessibles après l'obtention de ce diplôme (SLAM) :
             </p>
             <ul>
               <li>Analyste-programmeur</li>
-              <li>Développeur / Développeuse d’applications mobile</li>
+              <li>Développeur / Développeuse d'applications mobile</li>
               <li>Technicien / Technicienne informatique</li>
               <li>Développeur / Développeuse web</li>
               <li>Intégrateur web</li>
@@ -252,14 +231,14 @@
               </ul>
             <p>
               Voici une liste de quelque'uns des métiers principaux
-              accessibles après l’obtention de ce diplôme (SISR) :
+              accessibles après l'obtention de ce diplôme (SISR) :
             </p>
             <ul>
               <li>Administrateur systèmes et réseaux</li>
               <li>Technicien / Technicienne support</li>
               <li>Technicien / Technicienne réseau</li>
-              <li>Gestionnaire d’infrastructures informatiques</li>
-              <li>Responsable sécurité des systèmes d’information junior</li>
+              <li>Gestionnaire d'infrastructures informatiques</li>
+              <li>Responsable sécurité des systèmes d'information junior</li>
               <li>Analyste en cybersécurité</li>
               <li>Ingénieur cloud débutant</li>
               <li>Consultant en infrastructures informatiques</li>
@@ -293,7 +272,7 @@
                         <h3 class="timeline-title mb-0">Stage 2eme année</h3>
                         
                         <!-- Bouton aligné à droite -->
-                        <a href="\assets\Annexe_Tableau_de_synthese.pdf" class="btn btn-synthese" target="_blank">
+                        <a href="\autres\Tableau_de_synthese.pdf" class="btn btn-synthese" target="_blank">
                             <i class="icon-doc"></i> Tableau de synthèse
                         </a>
                     </div>
@@ -308,6 +287,10 @@
               <li class="timeline-inverted animate-box fadeInUp animated-fast">
                 <div class="timeline-badge"><i class="icon-suitcase"></i></div>
                 <div class="timeline-panel">
+                  <a href="./assets/documentation/stages.html" class="btn btn-synthese" target="_blank" style="width: 150px; padding: 8px 16px;">
+                    <i class="icon-doc"></i> Stages 1 & 2
+                  </a>
+
                   <div class="timeline-heading">
                     <h3 class="timeline-title"> Stage 1ere année </h3>
                     <span class="company"> Mwana Tango, Toulouse (télétravail) ⎪ juillet 2024 - août 2024</span>
@@ -611,12 +594,12 @@
         <!-- HTML5 -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-html5"></i>
+            <img src="./autres/icons/html5.avif" alt="HTML5" class="skill-icon">
             <span class="name-left"> &nbsp;HTML5</span>
-            <span class="skill-level-label">Avancé</span>
+            <span class="skill-level-label">Moyen</span>
           </h3>
-          <div class="skill-level-bar" data-level="Avancé">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+          <div class="skill-level-bar" data-level="Moyen">
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -632,12 +615,12 @@
         <!-- PHP -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-php"></i>
+            <img src="./autres/icons/php.avif" alt="PHP" class="skill-icon">
             <span class="name-left"> &nbsp;PHP</span>
             <span class="skill-level-label">Moyen</span>
           </h3>
           <div class="skill-level-bar" data-level="Moyen">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -653,12 +636,12 @@
         <!-- CSS3 -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-css3-alt"></i>
+            <img src="./autres/icons/css.avif" alt="CSS3" class="skill-icon">
             <span class="name-left"> &nbsp;CSS3</span>
             <span class="skill-level-label">Moyen</span>
           </h3>
           <div class="skill-level-bar" data-level="Moyen">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -676,12 +659,12 @@
         <!-- JavaScript -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-js-square"></i>
+            <img src="./autres/icons/javascript.svg" alt="JavaScript" class="skill-icon">
             <span class="name-left"> &nbsp;JavaScript</span>
             <span class="skill-level-label">Moyen</span>
           </h3>
           <div class="skill-level-bar" data-level="Moyen">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -697,12 +680,12 @@
         <!-- Java -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-java"></i>
+            <img src="./autres/icons/java.svg" alt="Java" class="skill-icon">
             <span class="name-left"> &nbsp;Java</span>
-            <span class="skill-level-label">Faible</span>
+            <span class="skill-level-label">Moyen</span>
           </h3>
-          <div class="skill-level-bar" data-level="Faible">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+          <div class="skill-level-bar" data-level="Moyen">
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -718,12 +701,12 @@
         <!-- C# -->
         <div class="skill-level-wrap">
           <h3>
-            <i class="fab fa-microsoft"></i>
+            <img src="./autres/icons/csharp.avif" alt="C#" class="skill-icon">
             <span class="name-left"> &nbsp;C#</span>
             <span class="skill-level-label">Moyen</span>
           </h3>
           <div class="skill-level-bar" data-level="Moyen">
-            <div class="skill-level-box" data-level="Faible"> <label for="Expert" style="color: white;">Débutant</label></div>
+            <div class="skill-level-box" data-level="Débutant"> <label for="Expert" style="color: white;">Débutant</label></div>
             <div class="skill-level-box" data-level="Moyen"> <label for="Expert" style="color: white;">Moyen</label></div>
             <div class="skill-level-box" data-level="Avancé"> <label for="Expert" style="color: white;">Avancé</label></div>
             <div class="skill-level-box" data-level="Expert"> <label for="Expert" style="color: white;">Expert</label></div>
@@ -740,28 +723,196 @@
   </div>
 
 
-       <!-- ========== Frameworks  ========== -->
-       <div class="container aos-init aos-animate" data-aos="fade-up">
+      <!-- ========== Frameworks  ========== -->
+      <div class="container aos-init aos-animate" data-aos="fade-up">
         <div class="section-title">
           <h2>Frameworks Pratiqués</h2>
           <span>Voici les frameworks avec lesquels j'ai travaillé et acquis des compétences.</span>
-        </div>
-        <div class="row">
+        </div>  <img src="./autres/img/fisherman.svg" alt="fisherman" class="fisherman-image">
+        <div class="row">    
           <div class="aqua">
             <ul class="frameworks-list">
-              <li><i class="fab fa-laravel"></i> Laravel</li>
-              <li><i class="fab fa-react"></i> React</li>
-              <li><i class="fab fa-node"></i> Node</li>
+              <li>
+                <i class="fab fa-laravel"></i> Laravel
+                <div class="framework-details">
+                  <h4>Laravel</h4>
+                  <p>Framework PHP pour le développement backend. Permet de créer des applications web robustes et sécurisées.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Moyen</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <i class="fab fa-react"></i> React
+                <div class="framework-details">
+                  <h4>React</h4>
+                  <p>Bibliothèque JavaScript pour construire des interfaces utilisateur interactives et des applications web modernes.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Avancé</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <i class="fab fa-node"></i> Node
+                <div class="framework-details">
+                  <h4>Node.js</h4>
+                  <p>Environnement d'exécution JavaScript côté serveur pour développer des applications web scalables.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Moyen</span>
+                  </div>
+                </div>
+              </li>
             </ul>
 
             <ul class="frameworks-list">
-              <li><i class="fab fa-tailwindcss"></i> Tailwind</li>
-              <li><i class="fab fa-angular"></i> Angular</li>
-              <li><i class="fab fa-symfony"></i> Symfony</li>
+              <li>
+                <i class="fab fa-tailwindcss"></i> Tailwind
+                <div class="framework-details">
+                  <h4>Tailwind CSS</h4>
+                  <p>Framework CSS utilitaire pour construire rapidement des interfaces personnalisées.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Avancé</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <i class="fab fa-angular"></i> Angular
+                <div class="framework-details">
+                  <h4>Angular</h4>
+                  <p>Framework TypeScript pour développer des applications web dynamiques et des applications mobiles.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Moyen</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <i class="fab fa-symfony"></i> Symfony
+                <div class="framework-details">
+                  <h4>Symfony</h4>
+                  <p>Framework PHP pour le développement d'applications web complexes et évolutives.</p>
+                  <div class="framework-level">
+                    <span class="level-dot active"></span>
+                    <span class="level-dot active"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-dot"></span>
+                    <span class="level-label">Moyen</span>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
+<br>
+<!-- Autres Stack -->
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Autres Stack</h2>
+      <span>Outils et technologies complémentaires</span>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/docker.png" alt="Docker" style="width: 80px; height: 80px; background-color: white; margin-bottom: 15px;">
+              <h3>Docker</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Conteneurisation et déploiement d'applications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/python.avif" alt="Python" style="width: 80px; height: 80px; margin-bottom: 15px;">
+              <h3>Python</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Développement d'applications et scripts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/blender.avif" alt="Blender" style="width: 80px; height: 80px; margin-bottom: 15px;">
+              <h3>Blender</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Modélisation 3D et animation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/photoshop.avif" alt="Photoshop" style="width: 100px; height: 80px; margin-bottom: 15px;">
+              <h3>Photoshop</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Retouche et création d'images</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/notion.avif" alt="Notion" style="width: 80px; height: 80px; margin-bottom: 15px;">
+              <h3>Notion</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Organisation et documentation de projets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./autres/icons/mongodb.avif" alt="MongoDB" style="width: 80px; height: 80px; margin-bottom: 15px;">
+              <h3>MongoDB</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Base de données NoSQL pour applications modernes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     </section>
             <!-- ========== Fin Compétences section =========== -->
 
@@ -770,20 +921,20 @@
               <!-- Section Projets -->
               <div class="section-projets">
                 <h2>Projets</h2>
-                <p>Découvrez mes projets personnels et professionnels.</p>
+                <p>Découvrez mes projets personnels, académiques et professionnels.</p>
               </div>
             
               <div class="bento-grid" id="projects-grid">
                 <!-- Projet Client Lourd -->
-                <div class="bento-item client-lourd" data-tech="Flutter, SQLite, Firebase" onclick="location.href='/maydit-details.html'">
-                  <img src="assets/images/maydit.jpg" alt="Maydit - Application Mobile" class="project-image">
+                <div class="bento-item client-lourd" data-tech="C#, SQLite" onclick="location.href='/maydit-details.html'">
+                  <img src="assets/img/herosjourney.png" alt="LVDH - Application Desktop" class="project-image">
                   <div class="overlay">
-                    <h3>Maydit - <span class="projetype">Personnel</span></h3>
+                    <h3>Le Voyage Du Héro - <span class="projetype">Personnel</span></h3>
                     <p>Client Lourd - Application mobile pour aider les créateurs de BD, manga, webtoon dans leur storytelling.</p>
-                    <span class="tech-stack">Technologies : Flutter, SQLite, Firebase</span>
+                    <span class="tech-stack">Technologies : C#, SQLite</span>
                     <div class="buttons">
-                      <a href="./assets/ohmycats/index.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
-                        <i class="bi bi-globe"></i> Site
+                      <a href="./assets/documentation/levoyageduhero.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
                       </a>
                       <a href="https://github.com/jeanpierresouamyogowet/" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
                         <i class="bi bi-github"></i> GitHub
@@ -795,14 +946,14 @@
             
                 <!-- Projet Client Léger -->
                 <div class="bento-item client-leger" data-tech="React, Node.js, MongoDB" onclick="location.href='/top-details.html'">
-                  <img src="assets/images/top.jpg" alt="Tôp - Plateforme Web" class="project-image">
+                  <img src="assets/img/topframe.png" alt="Tôp - Plateforme Web" class="project-image">
                   <div class="overlay">
                     <h3>Tôp - <span class="projetype">Personnel</span></h3>
                     <p>Client Léger - Plateforme pour accompagner les créateurs dans la conception de dossiers d'édition avec un blog tutoriel.</p>
                     <span class="tech-stack">Technologies : Laravel, Node.js, PHP, Tailwind, MySQL</span>
                     <div class="buttons">
-                      <a href="./assets/ohmycats/index.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
-                        <i class="bi bi-globe"></i> Site
+                      <a href="./assets/documentation/top.html" target="" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
                       </a>
                       <a href="https://github.com/jeanpierresouamyogowet/" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
                         <i class="bi bi-github"></i> GitHub
@@ -821,41 +972,113 @@
             
               <div class="bento-grid" id="realizations-grid">
                 <!-- Réalisation Personnelle -->
-                <div class="bento-item personal" data-tech="Python, Flask, SQLite" onclick="location.href='/personal-project-1.html'">
-                  <img src="assets/images/personal-project.jpg" alt="Projet Personnel" class="project-image">
+                <div class="bento-item personal" data-tech="HTML/CSS, Javascript">
+                  <img src="./assets/img/JOKONU.png" alt="Projet Personnel" class="project-image">
                   <div class="overlay">
-                    <h3>Gestionnaire de Tâches - <span class="projetype">Académique</span></h3>
-                    <p>Outil de gestion de tâches automatisées pour optimiser la productivité.</p>
-                    <span class="tech-stack">Technologies : Python, Flask, SQLite</span>
+                    <h3>JOKONU - <span class="projetype">Personnel</span></h3>
+                    <p>Générateur bilingue de blagues.</p>
+                    <span class="tech-stack">Technologies : HTML/CSS, Javascript</span>
                     <div class="buttons">
-                      <a href="./assets/ohmycats/index.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
-                        <i class="bi bi-globe"></i> Site
+                      <a href="./assets/documentation/jokonu.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
                       </a>
-                      <a href="https://github.com/jeanpierresouamyogowet/" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                      <a href="https://github.com/jeanpierresouamyogowet/jokonu/tree/master" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
                         <i class="bi bi-github"></i> GitHub
                       </a>
                     </div>
 
                   </div>
                 </div>
+
+                <div class="bento-item personal" data-tech="Symfony, FlPHPask, SQLite">
+                  <img src="./assets/img/siteEcomm.png" alt="Projet Personnel" class="project-image">
+                  <div class="overlay">
+                    <h3>Site Ecommerce - <span class="projetype">Académique</span></h3>
+                    <p>Développement d'un site Ecommerce en projet de test.</p>
+                    <span class="tech-stack">Technologies : Symfony, PHP, SQLite</span>
+                    <div class="buttons">
+                      <a href="./assets/documentation/ecommerce.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
+                      </a>
+                      <a href="https://github.com/jeanpierresouamyogowet/ecomSynfony" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="bento-item personal" data-tech="Javascript , HTML/CSS">
+                  <img src="./assets/img/mustodo.png" alt="Projet Personnel" class="project-image">
+                  <div class="overlay">
+                    <h3>Todolist - <span class="projetype">Académique</span></h3>
+                    <p>Travaux pratiques : Faire une todolist.</p>
+                    <span class="tech-stack">Technologies : Javascript , HTML/CSS</span>
+                    <div class="buttons">
+                      <a href="./assets/documentation/todolist.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
+                      </a>
+                      <a href="" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bento-item personal" data-tech="PHP, MySQL, API Stripe">
+                  <img src="./assets/img/quams.png" alt="QUAMS - Site Éphémère" class="project-image">
+                  <div class="overlay">
+                    <h3>QUAMS - <span class="projetype">Stage</span></h3>
+                    <p>Site éphémère pour un événement gaming en région parisienne.</p>
+                    <span class="tech-stack">Technologies : PHP, MySQL, API Stripe</span>
+                    <div class="buttons">
+                      <a href="./assets/documentation/quams.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-file-earmark-text"></i> En savoir plus
+                      </a>
+                      <a href="https://github.com/jeanpierresouamyogowet/quams" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
             
                 <!-- Réalisation Académique -->
-                <div class="bento-item academic" data-tech="Java, Spring Boot, MySQL">
+                <div class="bento-item academic" data-tech="HTML/CSS, Javascript">
                     <img src="./assets/ohmycats/img/coverohmycats.png" alt="Oh My Cats!" class="project-image">
                     <div class="overlay">
                       <h3>Oh My Cats! - <span class="projetype">Académique</span></h3>
                       <p>Une plateforme dédiée à l'adoption de chats, où vous pouvez trouver votre compagnon félin idéal. Parcourez les profils de nombreux chats en attente d'un foyer aimant, dites nous vos raisons et envoyez une demande d'adoption</p>
                       <span class="tech-stack">Technologies : HTML/CSS, Javascript</span>
                       <div class="buttons">
-                        <a href="./assets/ohmycats/index.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
-                          <i class="bi bi-globe"></i> Site
+                        <a href="./assets/documentation/ohmycats.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                          <i class="bi bi-file-earmark-text"></i> En savoir plus
                         </a>
-                        <a href="https://github.com/jeanpierresouamyogowet/" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                        <a href="https://github.com/jeanpierresouamyogowet/ohmycats/tree/master" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
                           <i class="bi bi-github"></i> GitHub
                         </a>
                       </div>
                     </div>
                   
+                </div>
+
+                <!-- Task Manager -->
+                <div class="bento-item academic" data-tech="C#">
+                    <img src="./assets/img/imgTask/taskmanager.png" alt="Task Manager" class="project-image">
+                    <div class="overlay">
+                      <h3>Task Manager - <span class="projetype">Académique</span></h3>
+                      <p>Gestionnaire de Tâches</p>
+                      <span class="tech-stack">Technologies : C#</span>
+                      <div class="buttons">
+                        <a href="./assets/documentation/taskManager.html" target="_blank" class="btn btn-website" style="text-decoration: none; color: inherit; display: block;">
+                          <i class="bi bi-file-earmark-text"></i> En savoir plus
+                        </a>
+                        <a href="https://github.com/jeanpierresouamyogowet/TaskManagerApp" target="_blank" class="btn btn-github" style="text-decoration: none; color: inherit; display: block;">
+                          <i class="bi bi-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
                 </div>             
                </div>
             
@@ -869,66 +1092,61 @@
               <p>Certification obtenue via L'ATELIER RGPD.</p>
             </div>
 
-                <div class="certifications-carousel">
-                  <button class="carousel-prev">❮</button>
-                  <div class="carousel-track" id="certifications-track">
-                    <!-- Certification 1 -->
-                    <div class="certification-rgpd">
-                      <h4>MODULE 1</h4>
-                      <img src="./assets\img\certifications\RGPD MODULE 1.jpg" alt="Certification RGPD">
-                    </div>
-                    <!-- Certification 2 -->
-                    <div class="certification-rgpd">
-                      <h4>MODULE 2</h4>
-                      <img src="./assets\img\certifications\RGPD MODULE 2.jpg" alt="Certification RGPD">                
-                    </div>
-                    <!-- Certification 3 -->
-                    <div class="certification-rgpd">
-                      <h4>MODULE 3</h4>
-                      <img src="./assets\img\certifications\RGPD MODULE 3.jpg" alt="Certification RGPD">
-                    </div>
-                    <!-- Certification 4 -->
-                    <div class="certification-rgpd">
-                      <h4>MODULE 4</h4>
-                      <img src="./assets\img\certifications\RGPD MODULE 4.jpg" alt="Certification RGPD">
-                    </div>
-                    <!-- Certification 5 -->
-                    <div class="certification-rgpd">
-                      <h4>MODULE 5</h4>
-                      <img src="./assets\img\certifications\RGPD MODULE 5.jpg" alt="Certification RGPD">
-                    </div>                   
-                  </div>
-                  <button class="carousel-next">❯</button>
+            <div class="certifications-carousel">
+              <button class="carousel-prev">❮</button>
+              <div class="carousel-track" id="certifications-track">
+                <!-- Certification 1 -->
+                <div class="certification-rgpd">
+                  <h4>MODULE 1</h4>
+                  <img src="./assets/img/certifications/RGPD MODULE 1.jpg" alt="Certification RGPD">
                 </div>
-
-                <div class="section-projets">
-                  <h3>Certifications de cours</h3>
+                <!-- Certification 2 -->
+                <div class="certification-rgpd">
+                  <h4>MODULE 2</h4>
+                  <img src="./assets/img/certifications/RGPD MODULE 2.jpg" alt="Certification RGPD">                
                 </div>
-                    <div class="certifications-carousel">
-                      <button class="carousel-prev">❮</button>
-                      <div class="carousel-track" id="certifications-tracker">
-                        <!-- Certification 1 -->
-                        <div class="certification-item">
-                          <img src="assets/images/cert-html-css.jpg" alt="Certification HTML/CSS">
-                          <h4>HTML5 & CSS3 Avancé</h4>
-                          <p>Certification obtenue via OpenClassrooms.</p>
-                        </div>
-                        <!-- Certification 2 -->
-                        <div class="certification-item">
-                          <img src="assets/images/cert-js.jpg" alt="Certification JavaScript">
-                          <h4>JavaScript ES6</h4>
-                          <p>Certification obtenue via Udemy.</p>
-                        </div>
-                        <!-- Certification 3 -->
-                        <div class="certification-item">
-                          <img src="assets/images/cert-react.png" alt="Certification React">
-                          <h4>React Developer</h4>
-                          <p>Certification obtenue via Coursera.</p>
-                        </div>
-                      </div>
-                      <button class="carousel-next">❯</button>
-                    </div>                                    
+                <!-- Certification 3 -->
+                <div class="certification-rgpd">
+                  <h4>MODULE 3</h4>
+                  <img src="./assets/img/certifications/RGPD MODULE 3.jpg" alt="Certification RGPD">
+                </div>
+                <!-- Certification 4 -->
+                <div class="certification-rgpd">
+                  <h4>MODULE 4</h4>
+                  <img src="./assets/img/certifications/RGPD MODULE 4.jpg" alt="Certification RGPD">
+                </div>
+                <!-- Certification 5 -->
+                <div class="certification-rgpd">
+                  <h4>MODULE 5</h4>
+                  <img src="./assets/img/certifications/RGPD MODULE 5.jpg" alt="Certification RGPD">
+                </div>                   
               </div>
+              <div class="carousel-dots"></div> <!-- Conteneur pour les dots -->
+              <button class="carousel-next">❯</button>
+            </div>
+            
+            <div class="section-projets">
+              <h3>Certifications de cours</h3>
+            </div>
+            <div class="certifications-carousel">
+              <button class="carousel-prev">❮</button>
+              <div class="carousel-track" id="certifications-tracker">
+                <!-- Certification 1 -->
+                <div class="certification-item">
+                  <img src="./assets/img/certifications/certificat_html_css.jpg" alt="Certification HTML/CSS">
+                </div>
+                <!-- Certification 2 -->
+                <div class="certification-item">
+                  <img src="./assets/img/certifications/Certificat_Apprenez à programmer avec JavaScript_page-0001.jpg" alt="Certification JavaScript">
+                </div>
+                <!-- Certification 3 -->
+                <div class="certification-item">
+                  <img src="./assets/img/certifications/Certificat SEO.png" alt="Certification SEO">
+                </div>
+              </div>
+              <div class="carousel-dots"></div> <!-- Conteneur pour les dots -->
+              <button class="carousel-next">❯</button>
+            </div>              </div>
             </section>
     <!-- ========== Veille section  ========== -->
     <section id="veille" class="faq">
@@ -961,9 +1179,9 @@
                   - Surveiller les avancées technologiques et les tendances du marché <br />
                   - Se tenir informé des innovations et des nouvelles solutions proposées par les concurrents <br />
                   - Réduire les coûts opérationnels et améliorer l'efficacité de la production <br />
-                  - Développer les compétences techniques et stratégiques au sein de l'entreprise <br />
+                  - Développer les compétences techniques et stratégiques au sein de l'entreprise <br /> 
                 </p>
-                
+                {# fgfoddosvnlovelrs #}
               </div>
             </li>
 
@@ -1097,7 +1315,7 @@
                     <p><i class="bx bx-news"></i> Hello Pomelo</p>
                     <p><i class="bx bxs-calendar"></i> 14-10-2023</p>
                   </div>
-                <h5>Le rôle d’une application mobile dans la transformation digitale :</h5>
+                <h5>Le rôle d'une application mobile dans la transformation digitale :</h5>
                 <p class="description">
                   Les applications mobiles jouent un rôle fondamental dans la transformation digitale des entreprises. Elles permettent d'améliorer l'expérience utilisateur en offrant une interaction plus fluide et personnalisée, facilitant ainsi la communication et les services. Les entreprises peuvent également optimiser leurs opérations internes grâce à la collecte de données et l'automatisation de certaines tâches. 
                   
@@ -1131,7 +1349,7 @@
                 </div>
                 <h5>Optimisation du SEO mobile en 2025 :</h5>
                 <p class="description">
-                  Les applications mobiles jouent un rôle crucial dans la transformation digitale des entreprises, et leur visibilité en ligne est déterminée en grande partie par une optimisation efficace du SEO. Pour 2025, plusieurs stratégies éprouvées peuvent être mises en place pour améliorer le classement des applications mobiles dans les moteurs de recherche. Parmi ces stratégies, il est essentiel de se concentrer sur la vitesse de chargement, l’optimisation du contenu mobile, la structuration des données et la compatibilité avec les différents appareils. En intégrant des techniques avancées de SEO mobile, une application peut non seulement accroître sa visibilité mais aussi maximiser son impact auprès des utilisateurs, favorisant ainsi l'engagement client et le succès à long terme.
+                  Les applications mobiles jouent un rôle crucial dans la transformation digitale des entreprises, et leur visibilité en ligne est déterminée en grande partie par une optimisation efficace du SEO. Pour 2025, plusieurs stratégies éprouvées peuvent être mises en place pour améliorer le classement des applications mobiles dans les moteurs de recherche. Parmi ces stratégies, il est essentiel de se concentrer sur la vitesse de chargement, l'optimisation du contenu mobile, la structuration des données et la compatibilité avec les différents appareils. En intégrant des techniques avancées de SEO mobile, une application peut non seulement accroître sa visibilité mais aussi maximiser son impact auprès des utilisateurs, favorisant ainsi l'engagement client et le succès à long terme.
                 </p>
                   <a class="btn" href="https://stepondigital.com/mobile-seo-optimization-11-proven-strategies-for-better-rankings-in-2025/" target="_blank">Article
                     <i class='bx bx-link-external'></i>
@@ -1162,7 +1380,7 @@
                   </div>
                 <h5>Les tendances du design </h5>
                 <p class="description">
-                  Le design web de 2025 s'annonce comme une véritable révolution dans l'expérience numérique. Les innovations ne se contentent plus de simplifier la navigation, elles transforment totalement l'interaction des utilisateurs avec les sites et applications. Avec l'essor de l'intelligence artificielle et des interfaces plus intuitives, les sites devront être non seulement réactifs mais aussi dynamiques, personnalisés en fonction des préférences individuelles. L'intégration de la réalité augmentée, l'optimisation pour les appareils mobiles et les interfaces vocales seront des éléments clés. En 2025, il ne s'agira plus seulement de rendre un site esthétiquement plaisant, mais de créer une expérience fluide et engageante qui anticipe les besoins des utilisateurs. C'est un tournant vers une interaction plus immersive et une adoption plus rapide des nouvelles technologies, au cœur de l’évolution du design web.
+                  Le design web de 2025 s'annonce comme une véritable révolution dans l'expérience numérique. Les innovations ne se contentent plus de simplifier la navigation, elles transforment totalement l'interaction des utilisateurs avec les sites et applications. Avec l'essor de l'intelligence artificielle et des interfaces plus intuitives, les sites devront être non seulement réactifs mais aussi dynamiques, personnalisés en fonction des préférences individuelles. L'intégration de la réalité augmentée, l'optimisation pour les appareils mobiles et les interfaces vocales seront des éléments clés. En 2025, il ne s'agira plus seulement de rendre un site esthétiquement plaisant, mais de créer une expérience fluide et engageante qui anticipe les besoins des utilisateurs. C'est un tournant vers une interaction plus immersive et une adoption plus rapide des nouvelles technologies, au cœur de l'évolution du design web.
                 </p>
                   <a class="btn" href="https://biziq.com/blog/top-10-web-design-trends-to-watch-in-2025/" target="_blank">Article
                     <i class='bx bx-link-external'></i>
@@ -1181,7 +1399,7 @@
         <div class="section-title">
           <h2>Contact</h2>
           <span>
-            Pour toute question, demande, projet ou simple curiosité à mon sujet, je suis à votre disposition. N’hésitez pas à me contacter !
+            Pour toute question, demande, projet ou simple curiosité à mon sujet, je suis à votre disposition. N'hésitez pas à me contacter !
           </span>
           <br>
           <br>
@@ -1257,44 +1475,8 @@
   </main>
   <!-- ========== Fin Main ========== -->
 
-  <!-- ========== Footer ========== -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="footer-contact">
-            <h3>J.P.S.O</h3>
-            <p>
-              <strong>Localisation</strong> : France, 75011 Paris<br>
-              <strong>Mobile</strong> : +33 7 50 12 21 73 <br>
-              <strong>Email</strong> : souamyjp@hotmail.com <br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright-wrap d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>2025</span></strong> Tous droits
-            réservés
-          </div>
-          <div class="credits">
-            Designed by
-            <a href="#">SOUAMY-OGOWET Jean-Pierre</a>
-          </div>
-        </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/jean-pierre-souamy-ogowet-168634185?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BAfX6E8PaRBuRladCqlvzvQ%3D%3D" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/jeanpierresouamyogowet" target="_blank" title="Profile Github"><i class="bx bxl-github"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- ========== Fin Footer ========== -->
+  <!-- Conteneur pour le footer -->
+  <div id="footer-container"></div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -1311,6 +1493,7 @@
 
   <!-- ========== Main JS ========== -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </body>

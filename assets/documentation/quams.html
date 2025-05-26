@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="Documentation du projet QUAMS" name="description" />
+    <meta content="QUAMS, Documentation, Projet" name="keywords" />
+    <meta content="Jean-Pierre Souamy-Ogowet" name="author" />
+    <title>QUAMS - Documentation</title>
+
+    <!-- ===== Favicons ===== -->
+    <link href="../img/faviconjpso.jpg" rel="icon" />
+
+    <!-- ===== Google fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- ====== Boxicons ====== -->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- ===== Vendeur CSS ===== -->
+    <link href="../vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- ===== Main CSS ===== -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="css/quams.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== Header ========== -->
+    <header id="header" class="fixed-top"></header>
+    <!-- ========== Fin Header ========== -->
+
+    <div class="container-quams">
+        <header class="project-header">
+            <h1>QUAMS</h1>
+            <p class="subtitle">Site éphémère pour un événement gaming en région parisienne</p>
+        </header>
+
+        <main>
+            <section id="description" class="quams-section" data-aos="fade-up">
+                <h2><i class='bx bx-info-circle'></i> Description du Projet</h2>
+                <div class="section-content">
+                    <p>QUAMS est un site éphémère développé lors de mon stage en première année pour un événement gaming en région parisienne. Le projet met en œuvre des technologies modernes pour offrir une expérience utilisateur fluide et sécurisée.</p>
+                    <div class="image-scroll-container">
+                        <img src="../img/imgQuams/quamsHome.png" alt="Interface principale de QUAMS" class="scrollable-image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="quams-section" data-aos="fade-up" data-aos-delay="100">
+                <h2><i class='bx bx-game'></i> Fonctionnalités</h2>
+                <div class="section-content">
+                    <div class="feature-item">
+                        <i class='bx bx-user-plus'></i>
+                        <h3>Inscription et Authentification</h3>
+                        <div class="feature-content">
+                            <p>Système complet d'inscription et de connexion pour les participants à l'événement.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-credit-card'></i>
+                        <h3>Paiement en Ligne</h3>
+                        <div class="feature-content">
+                            <p>Intégration de l'API Stripe pour gérer les paiements des billets d'entrée de manière sécurisée.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <i class='bx bx-calendar-event'></i>
+                        <h3>Gestion des Événements</h3>
+                        <div class="feature-content">
+                            <p>Interface d'administration pour gérer les tournois, les participants et les résultats.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="technologies" class="quams-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class='bx bx-code-alt'></i> Technologies Utilisées</h2>
+                <div class="section-content">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class='bx bxl-php'></i>
+                            <h3 class="text-center">PHP</h3>
+                            <p>Développement backend avec PHP pour la logique métier et la gestion des données</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-data'></i>
+                            <h3 class="text-center">MySQL</h3>
+                            <p>Base de données relationnelle pour stocker les informations des utilisateurs et des événements</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-credit-card-front'></i>
+                            <h3 class="text-center">API Stripe</h3>
+                            <p>Intégration de l'API de paiement Stripe pour les transactions sécurisées</p>
+                        </div>
+                    </div>
+                    <div class="stripe-integration">
+                        <img src="../img/imgQuams/quamsStripe.png" alt="Intégration Stripe dans QUAMS" class="stripe-image">
+                        <p class="stripe-description">Interface d'intégration de l'API Stripe pour la gestion sécurisée des paiements des billets d'entrée aux tournois</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="database" class="quams-section" data-aos="fade-up" data-aos-delay="300">
+                <h2><i class='bx bx-data'></i> Modèle Conceptuel de Données</h2>
+                <div class="section-content">
+                    <div class="database-content">
+                        <div class="database-image">
+                            <img src="../img/imgQuams/quamsMpd.png" alt="Modèle Conceptuel de Données QUAMS" style="width: 100%; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                        </div>
+                        
+                        <div class="database-description">
+                            <h3>Entités Principales</h3>
+                            
+                            <div class="entity-item">
+                                <h4><i class='bx bx-user'></i> UTILISATEUR</h4>
+                                <p>Entité centrale qui représente tous les acteurs du système :</p>
+                                <ul>
+                                    <li>Joueurs</li>
+                                    <li>Spectateurs</li>
+                                    <li>Administrateurs</li>
+                                </ul>
+                                <p>L'attribut <strong>type_utilisateur</strong> permet de différencier les rôles</p>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-calendar-event'></i> ÉVÉNEMENT</h4>
+                                <p>Représente l'événement global qui peut contenir plusieurs tournois :</p>
+                                <ul>
+                                    <li>Gestion des dates</li>
+                                    <li>Contrôle des inscriptions</li>
+                                    <li>Organisation des tournois</li>
+                                </ul>
+                                <p>Permet de gérer l'ouverture/fermeture des inscriptions</p>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-trophy'></i> TOURNOI</h4>
+                                <p>Compétition organisée dans le cadre d'un événement :</p>
+                                <ul>
+                                    <li>Lié à un événement spécifique</li>
+                                    <li>Associé à un jeu particulier</li>
+                                    <li>Gestion des formats de compétition</li>
+                                </ul>
+                                <p><strong>Relations :</strong></p>
+                                <ul>
+                                    <li>1 tournoi → 1 événement</li>
+                                    <li>1 tournoi → 1 jeu</li>
+                                    <li>1 tournoi → N participants</li>
+                                    <li>1 tournoi → N matchs</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-group'></i> ÉQUIPE</h4>
+                                <p>Entité séparée pour gérer les équipes multi-joueurs :</p>
+                                <ul>
+                                    <li>Nom de l'équipe</li>
+                                    <li>Logo</li>
+                                    <li>Statut</li>
+                                </ul>
+                                <p>Reliée aux utilisateurs via la table <strong>COMPOSITION</strong></p>
+                            </div>
+
+                            <h3>Relations Importantes</h3>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-user-plus'></i> Participation aux Tournois</h4>
+                                <p><strong>PARTICIPANT :</strong> Table de liaison entre UTILISATEUR, TOURNOI et optionnellement ÉQUIPE</p>
+                                <p>Permet de gérer les inscriptions solo ou en équipe</p>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-user-pin'></i> Composition des Équipes</h4>
+                                <p><strong>COMPOSITION :</strong> Table de liaison N:N entre UTILISATEUR et ÉQUIPE</p>
+                                <ul>
+                                    <li>Rôle dans l'équipe (capitaine/membre)</li>
+                                    <li>Date d'intégration</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-game'></i> Gestion des Matchs</h4>
+                                <p><strong>MATCH :</strong> Peut opposer soit des joueurs individuels, soit des équipes</p>
+                                <p>Les FK id_joueur_1/2 et id_equipe_1/2 sont nullables selon le type de tournoi</p>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-credit-card'></i> Billetterie et Paiements</h4>
+                                <p><strong>BILLET :</strong> Lié à un utilisateur et un événement</p>
+                                <p><strong>PAIEMENT :</strong> Relation 1:1 avec BILLET pour tracer chaque transaction</p>
+                            </div>
+
+                            <div class="entity-item">
+                                <h4><i class='bx bx-video'></i> Streaming</h4>
+                                <p><strong>STREAM :</strong> Optionnel, lié aux matchs pour la diffusion en direct</p>
+                            </div>
+
+                            <h3>Cardinalités Clés</h3>
+                            <div class="entity-item">
+                                <ul>
+                                    <li>1 Utilisateur → N Billets (un utilisateur peut acheter plusieurs billets)</li>
+                                    <li>1 Événement → N Tournois (un événement peut avoir plusieurs tournois)</li>
+                                    <li>1 Tournoi → N Matchs (un tournoi contient plusieurs matchs)</li>
+                                    <li>N Utilisateurs ↔ N Équipes (relation many-to-many via COMPOSITION)</li>
+                                    <li>1 Billet → 1 Paiement (chaque billet a un paiement unique)</li>
+                                </ul>
+                            </div>
+
+                            <h3>Points d'Attention pour l'Implémentation</h3>
+                            <div class="entity-item">
+                                <ul>
+                                    <li>Gestion des tournois solo vs équipe : Les FK dans MATCH sont conditionnelles selon le type de tournoi</li>
+                                    <li>Intégrité référentielle : Prévoir des contraintes pour éviter qu'un joueur soit inscrit plusieurs fois au même tournoi</li>
+                                    <li>Gestion des états : Les ENUM permettent de contrôler les flux (événements ouverts/fermés, billets valides/utilisés, etc.)</li>
+                                    <li>Scalabilité : La structure permet d'ajouter facilement de nouveaux types de billets, méthodes de paiement, etc.</li>
+                                </ul>
+                                <p class="mt-3"><em>Ce modèle couvre tous les besoins fonctionnels tout en restant flexible pour les évolutions futures !</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="competences" class="quams-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class='bx bx-check-circle'></i> Compétences Développées</h2>
+                <div class="section-content">
+                    <div class="competences-grid">
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp1" checked disabled>
+                                <label for="comp1">Développement Backend</label>
+                            </div>
+                            <p>Maîtrise du développement PHP et de la gestion de base de données MySQL pour créer une application robuste.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp2" checked disabled>
+                                <label for="comp2">Intégration d'API</label>
+                            </div>
+                            <p>Implémentation sécurisée de l'API Stripe pour la gestion des paiements en ligne.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp3" checked disabled>
+                                <label for="comp3">Gestion de Projet</label>
+                            </div>
+                            <p>Coordination du développement d'un projet web complet dans un contexte professionnel.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="project-footer">
+            <a href="../../index.html" class="btn-primary">
+                <i class='bx bx-home'></i>
+                Retour au portfolio
+            </a>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- ========== Vendor JS ========== -->
+    <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/php-email-form/validate.js"></script>
+
+    <!-- ========== Main JS ========== -->
+    <script src="../js/main.js"></script>
+    <script src="js/quams.js"></script>
+</body>
+</html>
+
