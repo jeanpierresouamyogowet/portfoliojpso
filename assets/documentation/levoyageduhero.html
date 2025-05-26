@@ -35,202 +35,137 @@
 </head>
 <body>
     <!-- ========== Header ========== -->
-    <header id="vh-header" class="fixed-top"></header>
+    <header id="header" class="fixed-top"></header>
     <!-- ========== Fin Header ========== -->
 
-    <div class="vh-wrapper">
-        <div class="vh-container">
-            <header class="vh-project-header">
-                <h1>Le Voyage du Héros</h1>
-                <p class="vh-subtitle">Application de structuration narrative</p>
-            </header>
+    <div class="container-hero">
+        <header class="project-header">
+            <h1>Client Lourd - Le Voyage du Héros</h1>
+            <p class="subtitle">Application de gestion de projets narratifs</p>
+        </header>
 
-            <main class="vh-main">
-                <section id="vh-description" class="vh-section" data-aos="fade-up">
-                    <h2><i class='bx bx-info-circle'></i> Description du Projet</h2>
-                    <div class="vh-section-content">
-                        <p>Le Voyage du Héros est une application desktop Windows permettant aux auteurs de structurer leurs récits narratifs selon les 12 étapes du Voyage du Héros. L'application offre des outils visuels pour organiser les idées, planifier les intrigues et maintenir une cohérence narrative.</p>
-                        <div style="text-align:center; margin: 2rem 0;">
-                            <img src="../img/imgVoyage/voyageHero.png" alt="Aperçu Le Voyage du Héros" style="width: 100%; max-width: 80%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+        <main>
+            <section id="description" class="hero-section" data-aos="fade-up">
+                <h2><i class='bx bx-info-circle'></i> Description du Projet</h2>
+                <div class="section-content">
+                    <p>Le Voyage du Héros est une application web permettant aux utilisateurs de gérer et de suivre leurs projets narratifs en suivant la structure du "Voyage du Héros" de Joseph Campbell. L'application aide les créateurs à organiser leurs idées, à suivre leur progression et à collaborer avec d'autres auteurs.</p>
+                    <div style="text-align:center; margin: 2rem 0;">
+                        <img src="../../autres/imgLourd/lvdhAuth.png" alt="Interface principale" class="main-image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="mcd" class="hero-section" data-aos="fade-up" data-aos-delay="100">
+                <h2><i class='bx bx-data'></i> Modèle Conceptuel de Données</h2>
+                <div class="section-content">
+                    <div class="mcd-container">
+                        <img src="../../autres/imgLourd/lvdhMcd.jpeg" alt="MCD du projet" class="mcd-image">
+                        <div class="mcd-description">
+                            <h3>Structure de la Base de Données</h3>
+                            <p>Le MCD est organisé autour de plusieurs entités principales :</p>
+                            <ul>
+                                <li><strong>UTILISATEUR</strong> : Gère les comptes utilisateurs et leurs préférences</li>
+                                <li><strong>PROJET</strong> : Représente les projets narratifs créés par les utilisateurs</li>
+                                <li><strong>ETAPE</strong> : Définit les différentes étapes du voyage du héros</li>
+                                <li><strong>NOTE</strong> : Permet aux utilisateurs de prendre des notes sur leurs projets</li>
+                                <li><strong>RESSOURCE</strong> : Stocke les ressources associées aux étapes</li>
+                                <li><strong>COMMENTAIRE</strong> : Facilite la collaboration entre utilisateurs</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="vh-features" class="vh-section" data-aos="fade-up" data-aos-delay="100">
-                    <h2><i class='bx bx-book-content'></i> Fonctionnalités</h2>
-                    <div class="vh-section-content">
-                        <div class="vh-feature-item">
-                            <i class='bx bx-plus-circle'></i>
-                            <h3>Création de projet</h3>
-                            <div class="vh-feature-content">
-                                <ul class="vh-feature-list">
-                                    <li class="vh-feature-list-item">Création de nouveaux projets avec titre et description</li>
-                                    <li class="vh-feature-list-item">Gestion de plusieurs frises par projet</li>
-                                    <li class="vh-feature-list-item">Stockage des données en base SQLite</li>
-                                </ul>
+            <section id="features" class="hero-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class='bx bx-feature'></i> Fonctionnalités</h2>
+                <div class="section-content">
+                    <div class="feature-item">
+                        <i class='bx bx-book-content'></i>
+                        <h3>Gestion de Projets</h3>
+                        <div class="feature-content">
+                            <div class="feature-image">
+                                <img src="../../autres/imgLourd/lvdhSteps.png" alt="Interface de gestion de projets">
                             </div>
-                        </div>
-
-                        <div class="vh-feature-item">
-                            <i class='bx bx-edit'></i>
-                            <h3>Gestion des notes</h3>
-                            <div class="vh-feature-content">
-                                <ul class="vh-feature-list">
-                                    <li class="vh-feature-list-item">Notes associées aux étapes du héros</li>
-                                    <li class="vh-feature-list-item">Éditeur Markdown/RichTextBox</li>
-                                    <li class="vh-feature-list-item">Système de tags personnalisables</li>
-                                    <li class="vh-feature-list-item">Positionnement sur la frise temporelle</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="vh-feature-item">
-                            <i class='bx bx-line-chart'></i>
-                            <h3>Visualisation et analyse</h3>
-                            <div class="vh-feature-content">
-                                <ul class="vh-feature-list">
-                                    <li class="vh-feature-list-item">Frise interactive pour la vue d'ensemble</li>
-                                    <li class="vh-feature-list-item">Statistiques narratifs avec OxyPlot</li>
-                                    <li class="vh-feature-list-item">Navigation rapide avec raccourcis clavier</li>
-                                    <li class="vh-feature-list-item">Zoom temporel pour les scènes précises</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="vh-feature-item">
-                            <i class='bx bx-share-alt'></i>
-                            <h3>Exportation et collaboration</h3>
-                            <div class="vh-feature-content">
-                                <ul class="vh-feature-list">
-                                    <li class="vh-feature-list-item">Export PDF du plan narratif</li>
-                                    <li class="vh-feature-list-item">Import/export JSON pour le partage</li>
-                                    <li class="vh-feature-list-item">Mode lecture seule pour les bêta-lecteurs</li>
-                                </ul>
-                            </div>
+                            <p>Créez et gérez vos projets narratifs avec une interface intuitive et organisée.</p>
                         </div>
                     </div>
-                </section>
 
-                <section id="vh-technologies" class="vh-section" data-aos="fade-up" data-aos-delay="200">
-                    <h2><i class='bx bx-code-alt'></i> Technologies Utilisées</h2>
-                    <div class="vh-section-content">
-                        <div class="vh-tech-grid">
-                            <div class="vh-tech-item">
-                                <i class='bx bxl-windows'></i>
-                                <h3>C# / WinForms</h3>
-                                <p>Développement de l'application desktop</p>
+                    <div class="feature-item">
+                        <i class='bx bx-map'></i>
+                        <h3>Suivi des Étapes</h3>
+                        <div class="feature-content">
+                            <div class="feature-image">
+                                <img src="../../autres/imgLourd/Frise_1.png" alt="Interface de suivi des étapes">
                             </div>
-                            <div class="vh-tech-item">
-                                <i class='bx bx-line-chart'></i>
-                                <h3>OxyPlot</h3>
-                                <p>Visualisation des données et statistiques</p>
-                            </div>
-                            <div class="vh-tech-item">
-                                <i class='bx bx-data'></i>
-                                <h3>Entity Framework + SQLite</h3>
-                                <p>Gestion de la base de données</p>
-                            </div>
-                            <div class="vh-tech-item">
-                                <i class='bx bx-palette'></i>
-                                <h3>MaterialSkin.2</h3>
-                                <p>Interface moderne et thèmes</p>
-                            </div>
+                            <p>Suivez la progression de votre histoire à travers les différentes étapes du voyage du héros.</p>
                         </div>
                     </div>
-                </section>
 
-                <section id="vh-competences" class="vh-section" data-aos="fade-up" data-aos-delay="300">
-                    <h2><i class='bx bx-check-circle'></i> Compétences Développées</h2>
-                    <div class="vh-section-content">
-                        <div class="vh-competences-grid">
-                            <div class="vh-competence-item">
-                                <div class="vh-competence-header">
-                                    <input type="checkbox" id="vh-comp1" checked disabled>
-                                    <label for="vh-comp1">Développement C#</label>
-                                </div>
-                                <p>Création d'applications Windows avec WinForms et gestion des événements.</p>
-                            </div>
-                            <div class="vh-competence-item">
-                                <div class="vh-competence-header">
-                                    <input type="checkbox" id="vh-comp2" checked disabled>
-                                    <label for="vh-comp2">Base de données</label>
-                                </div>
-                                <p>Utilisation d'Entity Framework avec SQLite pour la persistance des données.</p>
-                            </div>
-                            <div class="vh-competence-item">
-                                <div class="vh-competence-header">
-                                    <input type="checkbox" id="vh-comp3" checked disabled>
-                                    <label for="vh-comp3">Visualisation de données</label>
-                                </div>
-                                <p>Intégration d'OxyPlot pour les graphiques et statistiques.</p>
-                            </div>
-                            <div class="vh-competence-item">
-                                <div class="vh-competence-header">
-                                    <input type="checkbox" id="vh-comp4" checked disabled>
-                                    <label for="vh-comp4">Interface utilisateur</label>
-                                </div>
-                                <p>Création d'interfaces modernes avec MaterialSkin.2 et gestion des interactions.</p>
-                            </div>
-                            <div class="vh-competence-item">
-                                <div class="vh-competence-header">
-                                    <input type="checkbox" id="vh-comp5" checked disabled>
-                                    <label for="vh-comp5">Architecture logicielle</label>
-                                </div>
-                                <p>Organisation du code en couches et gestion des dépendances.</p>
-                            </div>
+                </div>
+            </section>
+
+            <section id="technologies" class="hero-section" data-aos="fade-up" data-aos-delay="300">
+                <h2><i class='bx bx-code-alt'></i> Technologies Utilisées</h2>
+                <div class="section-content">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class='bx bxl-php'></i>
+                            <h3>PHP</h3>
+                            <p>Backend robuste avec architecture MVC</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bxl-mysql'></i>
+                            <h3>MySQL</h3>
+                            <p>Base de données relationnelle optimisée</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bxl-javascript'></i>
+                            <h3>JavaScript</h3>
+                            <p>Interface dynamique et réactive</p>
                         </div>
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
 
-            <div class="vh-project-footer">
-                <a href="../../index.html" class="vh-btn-primary">
-                    <i class='bx bx-home'></i>
-                    Retour au portfolio
-                </a>
-            </div>
-        </div>
+            <section id="competences" class="hero-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class='bx bx-check-circle'></i> Compétences Développées</h2>
+                <div class="section-content">
+                    <div class="competences-grid">
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp1" checked disabled>
+                                <label for="comp1">Développement Back-End</label>
+                            </div>
+                            <p>Création d'une architecture MVC robuste avec PHP et MySQL.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp2" checked disabled>
+                                <label for="comp2">Gestion de Base de Données</label>
+                            </div>
+                            <p>Conception et optimisation d'une base de données relationnelle complexe.</p>
+                        </div>
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <input type="checkbox" id="comp3" checked disabled>
+                                <label for="comp3">Interface Utilisateur</label>
+                            </div>
+                            <p>Développement d'une interface utilisateur intuitive et responsive.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="project-footer">
+            <a href="../../index.html" class="btn-primary">
+                <i class='bx bx-home'></i>
+                Retour au portfolio
+            </a>
+        </footer>
     </div>
 
-    <!-- ========== Footer ========== -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-contact">
-                        <h3>J.P.S.O</h3>
-                        <p>
-                            <strong>Localisation</strong> : France, 75011 Paris<br>
-                            <strong>Mobile</strong> : +33 7 50 12 21 73 <br>
-                            <strong>Email</strong> : souamyjp@hotmail.com <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright-wrap d-md-flex py-4">
-                <div class="me-md-auto text-center text-md-start">
-                    <div class="copyright">
-                        &copy; Copyright <strong><span>2025</span></strong> Tous droits réservés
-                    </div>
-                    <div class="credits">
-                        Designed by
-                        <a href="#">SOUAMY-OGOWET Jean-Pierre</a>
-                    </div>
-                </div>
-                <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/jean-pierre-souamy-ogowet-168634185?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BAfX6E8PaRBuRladCqlvzvQ%3D%3D" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/jeanpierresouamyogowet" target="_blank" title="Profile Github"><i class="bx bxl-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ========== Fin Footer ========== -->
-
-    <a href="#" class="vh-back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- ========== Vendor JS ========== -->
     <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
